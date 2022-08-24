@@ -1,9 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { GiShoppingBag } from "react-icons/gi";
 import { GiShoppingCart } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const cartCount=useSelector((state)=> state.cart.cartList.length);
   return (
     <nav className="bg-dark text-white py-3">
       <div className="container d-flex align-items-center">
@@ -17,7 +19,13 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink to="/cart">
-              <GiShoppingCart className="react-icon" activeclassname='active'/>
+              <div className="cartIcon position-relative">
+                <GiShoppingCart className="react-icon" activeclassname='active' />
+                {
+                  cartCount >= 1 && <span>{cartCount}</span>
+                }
+                
+              </div>
             </NavLink>
           </li>
           <li>

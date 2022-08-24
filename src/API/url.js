@@ -1,2 +1,2 @@
 
-export const baseUrl='https://api.escuelajs.co/api/v1/products';
+export const baseUrl='https://dummyjson.com/products';
