@@ -25,11 +25,7 @@ const Products = () => {
         <div className="container">
           <ul className='products-list'>
             {
-              allProducts.filter((product) => {
-                return (
-                  Math.floor(product.price * 79.87) <= filterPrice
-                )
-              }).map((product) => {
+              allProducts.map((product) => {
                 return (
                   <Product key={product.id} {...product} />
                 )

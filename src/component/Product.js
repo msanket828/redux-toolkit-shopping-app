@@ -9,7 +9,7 @@ const Product = (props) => {
 
   /* -------------- conversion of dollar to rupees + comma logic -------------- */
   const convertDollarToRupees = (dollar) => {
-    var x = Math.floor(dollar * 79.87);
+    var x = Math.floor(dollar * 80);
     x = x.toString();
     var lastThree = x.substring(x.length - 3);
     var otherNumbers = x.substring(0, x.length - 3);

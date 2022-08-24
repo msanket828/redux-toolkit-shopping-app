@@ -383,3 +383,68 @@ nav .cartIcon span {
 .sidebar .filterprice {
   font-weight: 700;
 }
+
+/* ---------------------------------- cart page : start ---------------------------------- */
+.cart {
+  padding-top: 80px;
+}
+.cart .container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.cart .selected-items {
+  width: calc(70% - 10px);
+  margin-right: 10px;
+}
+
+.cart .total-summary {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #DDDDDD;
+}
+
+/* -------------------------- SelectedItem : start -------------------------- */
+.cart .selected-items .selected-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #DDDDDD;
+}
+.cart .selected-items .selected-item:not(:last-child) {
+  margin: 0 0 10px;
+}
+
+.cart .selected-items .selected-item figure {
+  width: 150px;
+  height: 150px;
+  margin: 0 10px 0 0;
+}
+
+.cart .selected-items .selected-item figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+/* --------------------------- AllPurchase : start -------------------------- */
+.cart .total-summary {
+  position: sticky;
+  top: 80px;
+  z-index: 9;
+}
+.cart .total-summary .allpurchase {
+  display: flex;
+  align-items: flex-start;
+}
+.cart .total-summary .allpurchase p {
+  flex: 0.5;
+  margin-bottom: 10px;
+}
+.cart .total-summary .allpurchase p:first-child {
+  margin-right: 10px;
+}
+.cart .total-summary .allpurchase p:last-child {
+ text-align: right;
+}
