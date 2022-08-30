@@ -1,6 +1,9 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
+import { removeFromCart } from '../fetures/cartSlice';
 
 const SelectedItem = ({ selectedProduct }) => {
+  const dispatch=useDispatch();
   const convertDollarToRupees = (dollar) => {
     var x = Math.floor(dollar * 80);
     x = x.toString();
@@ -20,7 +23,7 @@ const SelectedItem = ({ selectedProduct }) => {
         <h2>{selectedProduct.title}</h2>
         <h1>Price: ₹ {convertDollarToRupees(selectedProduct.price)}</h1>
       </div>
-      <button className='secondary-btn ml-auto'>Remove</button>
+      <button className='secondary-btn ml-auto' onClick={()=>dispatch(removeFromCart(selectedProduct))}>Remove</button>
     </div>
   )
 }

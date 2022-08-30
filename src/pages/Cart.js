@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import AllPurchase from '../component/AllPurchase';
 import SelectedItem from '../component/SelectedItem';
+import { removeFromCart } from '../fetures/cartSlice';
 
 const Cart = () => {
   const selectedProducts = useSelector((state) => state.cart.cartList);
   const[total,setTotal]=useState(0);
   useEffect(()=> {
     setTotal(selectedProducts.reduce((acc, cur) => {
-        return acc + cur.price
+      return acc + cur.price
     }, 0))
   },[selectedProducts]);
-
+  
+  
   const convertDollarToRupees = (dollar) => {
     var x = Math.floor(dollar * 80);
     x = x.toString();
@@ -30,7 +32,8 @@ const Cart = () => {
           {
             selectedProducts.map((selectedProduct) => {
               return (
-                <SelectedItem key={selectedProduct.id} selectedProduct={selectedProduct} />
+                <SelectedItem key={selectedProduct.id} selectedProduct={selectedProduct} 
+                 />
               )
             })
           }
