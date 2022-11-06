@@ -134,17 +134,16 @@ table {
   border-spacing: 0;
 }
 
-
 /* ---------------------------- custom css start ---------------------------- */
 .container {
-  max-width: 1200px !important;
+  max-width: 1366px !important;
   width: 100%;
   margin: 0 auto;
 }
 .react-icon {
   font-size: 20px;
   line-height: 24px;
-  color: #FFF;
+  color: #fff;
 }
 
 nav {
@@ -178,7 +177,7 @@ nav ul li:not(:last-child) {
 }
 
 nav ul li a {
-  color: #FFF;
+  color: #fff;
 }
 
 nav ul li a.active {
@@ -196,7 +195,7 @@ nav .cartIcon span {
   right: calc(0px - 10px);
   width: 20px;
   height: 20px;
-  background: #F90;
+  background: #f90;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -207,7 +206,11 @@ nav .cartIcon span {
 
 /* -------------------------------- products : start -------------------------------- */
 .home-container {
+  position: relative;
   padding-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .common.products {
@@ -255,7 +258,11 @@ nav .cartIcon span {
   padding: 0 10px;
 }
 
-.products-list .product-wrapper .product-card .product-detail .product_category {
+.products-list
+  .product-wrapper
+  .product-card
+  .product-detail
+  .product_category {
   position: relative;
   font-size: 14px;
   line-height: 16px;
@@ -267,9 +274,13 @@ nav .cartIcon span {
   overflow: hidden;
 }
 
-.products-list .product-wrapper .product-card .product-detail .product_category::before {
+.products-list
+  .product-wrapper
+  .product-card
+  .product-detail
+  .product_category::before {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   right: -7px;
   width: 10px;
@@ -278,9 +289,13 @@ nav .cartIcon span {
   transform: skewX(-9deg);
 }
 
-.products-list .product-wrapper .product-card .product-detail .product_category::after {
+.products-list
+  .product-wrapper
+  .product-card
+  .product-detail
+  .product_category::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   width: 15%;
@@ -306,13 +321,12 @@ nav .cartIcon span {
   }
 }
 
-
 .products-list .product-wrapper .product-card .product-detail .product_rating {
   position: absolute;
   top: 10px;
   right: 10px;
   background: rgb(173, 62, 62);
-  color: #FFF;
+  color: #fff;
   padding: 5px;
   border-radius: 50px;
   width: 25px;
@@ -332,7 +346,6 @@ nav .cartIcon span {
   margin: 10px auto;
 }
 
-
 /* ----------------------------- primary-button ----------------------------- */
 
 .primary-btn {
@@ -340,7 +353,7 @@ nav .cartIcon span {
   font-size: 14px;
   line-height: 18px;
   font-weight: 550;
-  color: #FFF;
+  color: #fff;
   border: none;
   border-radius: 4px;
   background: #166616c2;
@@ -351,11 +364,10 @@ nav .cartIcon span {
   font-size: 14px;
   line-height: 18px;
   font-weight: 550;
-  color: #FFF;
+  color: #fff;
   border: none;
   border-radius: 4px;
   background: #ec5757;
-
 }
 
 /* --------------------------------- sidebar -------------------------------- */
@@ -371,7 +383,6 @@ nav .cartIcon span {
 .slider {
   width: 100%;
 }
-
 
 .sidebar .label-v1,
 .sidebar .filterprice {
@@ -401,7 +412,7 @@ nav .cartIcon span {
 .cart .total-summary {
   width: 30%;
   padding: 10px;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #dddddd;
 }
 
 /* -------------------------- SelectedItem : start -------------------------- */
@@ -409,7 +420,7 @@ nav .cartIcon span {
   display: flex;
   align-items: center;
   padding: 10px;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #dddddd;
 }
 .cart .selected-items .selected-item:not(:last-child) {
   margin: 0 0 10px;
@@ -426,7 +437,6 @@ nav .cartIcon span {
   height: 100%;
   object-fit: contain;
 }
-
 
 /* --------------------------- AllPurchase : start -------------------------- */
 .cart .total-summary {
@@ -446,5 +456,5 @@ nav .cartIcon span {
   margin-right: 10px;
 }
 .cart .total-summary .allpurchase p:last-child {
- text-align: right;
+  text-align: right;
 }
